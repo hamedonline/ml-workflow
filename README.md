@@ -1,7 +1,7 @@
 # Machine Learning Workflow - From EDA to Production
 
 ## Introduction
-This repo tries to study & apply the least minimal steps involved in machine learning workflow. It is compiled during the ["Machine Learning Zoomcamp"](https://datatalks.club/courses/2021-winter-ml-zoomcamp.html) course instructed by amazing [@alexeygrigorev](https://github.com/alexeygrigorev).
+This repo tries to study & apply the least minimal steps involved in machine learning workflow the right way. It is compiled during the ["Machine Learning Zoomcamp"](https://datatalks.club/courses/2021-winter-ml-zoomcamp.html) course instructed by amazing [@alexeygrigorev](https://github.com/alexeygrigorev).
 <br><br>
 
 
@@ -25,4 +25,5 @@ The main intention in this workflow is not achieving the best benchmark score fo
 Given the above line you might ask, what's the focus here? I can summarize the answer with following lines:
 - To take a quick look at the minimal required steps involved in a machine learning problem, from EDA to production.
 - Trying to avoid common slips, and conducting each step the right way.
+- Keep in mind that the material here is only tip of the iceberg, but hopefully with a nice view 😉.
 <br><br>
