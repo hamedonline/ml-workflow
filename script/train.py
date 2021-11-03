@@ -35,8 +35,8 @@ MODEL_NAME_PREFIX = 'model_pipeline'
 
 
 # create a unique identifier for run
-unique_run_identifier = '-'.join([
-    datetime.now().strftime('%Y.%m.%d-%H%M%S'),
+unique_run_identifier = ''.join([
+    datetime.now().strftime('%Y.%m.%d-%H%M%S-'),
     ''.join(random.choices(string.ascii_uppercase + string.digits, k=4))
 ])
 
@@ -140,16 +140,18 @@ if __name__ == "__main__":
     ])
     pipeline_final.fit(X_train, y_train)
 
+    print('\nTraining completed successfully.')
+
 
     # save model bin file for inference
     if model_file_saving:
         pipeline_name = f'{MODEL_NAME_PREFIX}_{unique_run_identifier}.bin'
         with open(MODEL_PATH+pipeline_name, 'wb') as output_file:
             pickle.dump((pipeline_final), output_file)
-            print(f'Model pipeline file saved successfully in >> {MODEL_PATH+pipeline_name}')
+            print(f'\nModel pipeline file saved successfully in >> {MODEL_PATH+pipeline_name}')
         output_file.close()
 
     # # make predictions on test data
     # y_pred_test = np.expm1(pipeline_final.predict(X_test))
 
-    print('\nAll done :)')
+    print('\\nAll done :)')
