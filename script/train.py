@@ -1,11 +1,14 @@
 # required library imports & initial settings
 
 import os
+import string
+import random
+import pickle
 import numpy as np
 import pandas as pd
 import xgboost as xgb
-import pickle
 
+from datetime import datetime
 from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder, MinMaxScaler, StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
@@ -15,16 +18,27 @@ from sklearn.pipeline import Pipeline
 # set seed value for reproducibility
 RANDOM_SEED = 1024
 
-# enable GPU
-gpu_enabled = True  # set this to False if your GPU is not compatible or a GPU error rises during training
+# enable GPU utilization
+use_gpu = True  # set this to False if your GPU is not compatible or a GPU error rises during training
 
-# save_model_file = False
-# prediction_file_for_test = True
+# create model bin file after training
+model_file_saving = True
+
+# # create test predictions csv file
+# test_predictions_saving = True
 
 # define relative data path (according the current path of this file)
 dirname = os.path.dirname(__file__)
 DATA_PATH  = dirname+'/data/'
 MODEL_PATH = dirname+'/model/'
+MODEL_NAME_PREFIX = 'model_pipeline'
+
+
+# create a unique identifier for run
+unique_run_identifier = '-'.join([
+    datetime.now().strftime('%Y.%m.%d-%H%M%S'),
+    ''.join(random.choices(string.ascii_uppercase + string.digits, k=4))
+])
 
 
 # logarithmic transform function
@@ -33,7 +47,7 @@ def log_transform(value):
 
 
 if __name__ == "__main__":
-    print('\nreading data...')
+    print('\nReading data...')
     # read data into pandas dataframes
     df_train_full = pd.read_csv(DATA_PATH+'train_cleaned.csv.gz')
     df_test = pd.read_csv(DATA_PATH+'test_cleaned.csv.gz')
@@ -45,7 +59,7 @@ if __name__ == "__main__":
     features_categorical = [column for column in df_train_full if column.startswith('cat')]
     features_all = features_numerical + features_categorical
 
-    print('\nprocessing data...')
+    print('\nProcessing data...')
 
     # create a new logarithmically transformed target column
     df_train_full[name_of_target_column_transformed] = df_train_full.apply(
@@ -101,10 +115,10 @@ if __name__ == "__main__":
     y_train = df_train_full[name_of_target_column_transformed].to_numpy()
     X_test  = df_test[features_all]
 
-    tree_method_applied = 'gpu_hist' if gpu_enabled else 'auto'
+    tree_method_applied = 'gpu_hist' if use_gpu else 'auto'
 
-    # tuned xgboost hyperparameters
-    xgb_params_final = {
+    # xgboost hyperparameters (tuned previously)
+    xgb_params = {
         'n_estimators': 35,
         'max_depth': 4,
         'eta': 0.27,
@@ -116,17 +130,26 @@ if __name__ == "__main__":
         'seed': RANDOM_SEED,
     }
 
-    print('\ntraining the model...')
+    print('\nTraining the model...')
 
     # create pipeline & train
-    model_final = xgb.XGBRegressor(**xgb_params_final)
+    model_xgb = xgb.XGBRegressor(**xgb_params)
     pipeline_final = Pipeline(steps=[
         ('preprocessor', preprocessor),
-        ('model', model_final)
+        ('model', model_xgb)
     ])
     pipeline_final.fit(X_train, y_train)
 
-    # make predictions on test data
-    y_pred_test = np.expm1(pipeline_final.predict(X_test))
 
-    print('\ntraining finished, all done :)')
+    # save model bin file for inference
+    if model_file_saving:
+        pipeline_name = f'{MODEL_NAME_PREFIX}_{unique_run_identifier}.bin'
+        with open(MODEL_PATH+pipeline_name, 'wb') as output_file:
+            pickle.dump((pipeline_final), output_file)
+            print(f'Model pipeline file saved successfully in >> {MODEL_PATH+pipeline_name}')
+        output_file.close()
+
+    # # make predictions on test data
+    # y_pred_test = np.expm1(pipeline_final.predict(X_test))
+
+    print('\nAll done :)')
