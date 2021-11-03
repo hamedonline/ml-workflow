@@ -7,7 +7,7 @@ This repo tries to study & apply the least minimal steps involved in machine lea
 
 ## Problem Description
 The problem we will study was held as a competition on Kaggle titled as ["Allstate Claims Severity"](https://www.kaggle.com/c/allstate-claims-severity/). The data was provided by ["Allstate"](https://www.allstate.com/), a personal insurer in the United States. They were looking for ML-based methods to reduce the cost of insurance claims.
-The objective of the problem is to predict _'loss'_ value for a claim and submissions were evaluated on the __Mean Absolute Error (MAE)__ between the predicted loss and the actual loss.
+The objective of the problem is to predict _'loss'_ value for a claim, which makes it a __regression__ problem. The submissions for test data are evaluated on the __Mean Absolute Error (MAE)__ between the predicted loss and the actual loss.
 All the data column values and names in provided dataset are obfuscated for the privacy reasons. Thus, we'll have no __"Domain Knowledge"__ over this problem.
 <p align="center">
     <img src="./resources/allstate_banner-660x120.png" width="500" />
