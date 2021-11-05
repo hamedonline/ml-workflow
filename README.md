@@ -32,3 +32,5 @@ Given the above line you might ask, what's the focus here? I can summarize the a
 - Trying to avoid common slips, and conducting each step the right way.
 - Keep in mind that the material here is only tip of the iceberg, but hopefully with a nice view 😉.
 <br><br>
+
+If you find the content useful, please show your support by hitting the ⭐; and add it to your watch list too, cause I'll be posting updates occasionally.
