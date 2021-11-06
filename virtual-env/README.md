@@ -12,7 +12,7 @@ Creating a virtual environment is easy and straightforward. We'll use __*pipenv*
 First of all, prepare the folder and put your files (just like the ml-flow example) inside it. Open up a terminal (Linux) or command prompt (Windows) or Anaconda prompt (if you're using Anaconda or Miniconda).
 Navigate to inside of this folder in your terminal and run the following command:
 ```
-pip install -r requirements.txt
+pipenv install -r requirements.txt
 ```
 
 This will take care of creating a virtual environment (in your folder) and installing dependencies for you.
