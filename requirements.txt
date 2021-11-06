@@ -1,3 +1,4 @@
+jupyterlab
 numpy
 pandas
 seaborn
