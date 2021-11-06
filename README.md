@@ -22,6 +22,12 @@ Train and test datasets contain __188,318__ and __125,546__ rows (samples) respe
 <br><br>
 
 
+## Requirements
+This entire repo relies on python programming language for demonstrating a machine learning workflow. Workflow steps are explained and can be run in ["Jupyter Notebook"](https://jupyter.org) documents, allowing us to execute them in an interactive environment. The easiest way to install python and many popular libraries for data science is through setting up [Anaconda](https://www.anaconda.com). You may refer to <mark>virtual-env</mark> folder in this repo to review a quick guide on how to setup a virtual environment without running into conflicts with your current setup.
+
+I'd also recommend you to go through the notebooks one by one, and orderly.
+<br><br>
+
 ## Important Note
 For the sake of simplicity, we assume that __"Data Collection"__ step is already done since we're going to use a publicly available Kaggle dataset. Please note though, this is not the case in real-world scenarios. Most of the time, tabular data is collected by querying multiple database tables and running pretty complex SQL commands. If you're planning to become a machine learning engineer, make sure you understand and know a good deal about databases and writing efficient SQL queries; that, ladies and gents, turns out to be an essential & invaluable asset to possess for a ML engineer.
 
