@@ -8,6 +8,8 @@ from waitress import serve
 
 # path to the folder containing our model
 MODEL_PATH = './model/'
+# port number to run the web server on
+SERVER_PORT = 9696
 
 
 def load_model(path_to_model):
@@ -43,4 +45,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    serve(app, host='0.0.0.0', port=9696)
+    serve(app, host='0.0.0.0', port=SERVER_PORT)
