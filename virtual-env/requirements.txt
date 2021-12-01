@@ -1,0 +1,6 @@
+numpy
+pandas
+sklearn
+xgboost
+flask
+waitress
