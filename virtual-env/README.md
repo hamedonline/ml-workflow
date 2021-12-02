@@ -75,7 +75,7 @@ or
 python -m inference
 ```
 
-__Warning__: Don't forget to copy ``inference.py`` and ``model/model.bin`` to your virtual environment folder (these files are provided inside __``script``__ folder of this repository); also you must update model path variable in ``inference.py`` accordingly ;)
+__Warning__: Don't forget to copy ``inference.py`` and ``model/model.bin`` to your virtual environment folder (these files are provided inside __``script``__ folder of this repository). In addition, you must update model path variable in ``inference.py`` accordingly.
 
 I've already provided ``requirements.txt``, ``Pipfile`` and ``Pipfile.lock`` files inside this folder and you can try either methods as an exercise. Just as a side note, you can even try method (A) for this entire repo using ``requirements.txt`` file in repository's root.
 
@@ -87,4 +87,4 @@ It is possible to generate back ``requirements.txt`` file using ``Pipfile`` and 
 pipenv lock -r > requirements.txt
 ```
 
-For some very useful advanced tips on ``pipenv`` you can [check this out](https://github.com/pypa/pipenv/blob/main/docs/advanced.rst).
+Last but not least, make sure to check out some very useful advanced tips on ``pipenv`` [here](https://github.com/pypa/pipenv/blob/main/docs/advanced.rst).
