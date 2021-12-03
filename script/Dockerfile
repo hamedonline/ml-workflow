@@ -1,4 +1,4 @@
-# docker config for an stand-alone inference script instance
+# docker config for a stand-alone inference script instance
 
 FROM clearlinux/python:3.7
 WORKDIR /app
