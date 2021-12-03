@@ -43,4 +43,4 @@ A good machine learning solution involves many steps; the ml algo for instance, 
 </p>
 <br><br>
 
-If you find the content useful, please show your support by hitting the ⭐; and add it to your watch list too, cause I'll be posting updates occasionally.
+Pull requests are super welcome. Please don't hesitate to contribute if you think something is missing or needs an improvement. Hope you find the content useful, and don't forget to show your support by hitting the ⭐.
