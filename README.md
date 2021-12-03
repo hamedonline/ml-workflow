@@ -23,7 +23,7 @@ All the data column values and names in provided dataset are obfuscated for the 
 The dataset used in this repo is a __"Tabular"__ one, meaning the data is represented in __rows__ and __columns__, corresponding to __samples__ and __features__ respectively.<br>
 Data columns (features) are in both __categorical__ and __numerical__ types. Train and test datasets contain __188,318__ and __125,546__ rows (samples) respectively with __130__ columns as features, plus two more columns representing "claim id" and "target" named as _'id'_ and _'loss'_.
 
-Regarding the dataset's availability, you wouldn't need to download it separately. It is already provided in repo's <mark>__scripts/data__</mark> folder.
+Regarding the dataset's availability, it is already provided in repo's <mark>__scripts/data__</mark> folder and you don't need to download it separately.
 
 <br>
 
