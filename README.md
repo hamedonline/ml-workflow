@@ -13,7 +13,7 @@ The objective of the problem is to predict _'loss'_ value for a claim, which mak
 All the data column values and names in provided dataset are obfuscated for the privacy reasons. Thus, we'll have no __"Domain Knowledge"__ over this problem.
 
 <p align="center">
-    <img src="./resources/allstate_banner-660x120.png" width="500" />
+    <img src="./assets/allstate_banner-660x120.png" width="500" />
 </p>
 
 <br>
@@ -49,7 +49,7 @@ Given the above line you might ask, what's the focus here? I can summarize the a
 A good machine learning solution involves many steps; the ml algo for instance, is just tip of the iceberg. Hopefully, the material here gives you a nice view of what you should expect in your journey 😉.
 
 <p align="center">
-    <img src="./resources/ml-iceberg.jpg" />
+    <img src="./assets/ml-iceberg.jpg" />
 </p>
 
 <br>
