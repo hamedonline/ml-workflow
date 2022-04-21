@@ -14,7 +14,7 @@ You would need to have __*python3*__, __*pip*__ and __*pipenv*__ already install
 
 Creating a virtual environment is easy and straightforward. We'll use __*pipenv*__ to manage our virtual environment. There are also other good options, but that is another story for us to study & explore.
 
-First of all, prepare the folder and put your files inside it (just like the inference example mentioned in introduction section above). Create an additional file, named ``requirements.txt``. This is the file holding the names of libraries we'd like our virtual environment to have. Inside ``requirements.txt`` file, put in each required library name (this should be equal to the name used when installing by pip, for instance: pip install __sklearn__); each line must have only one library name. This is what a typical ``requirements.txt`` file should look like:
+First of all, prepare the folder and put your files inside it (just like the inference example mentioned in introduction section above). Create an additional file, named ``requirements.txt``. This is the file holding the names of libraries we'd like our virtual environment to have. Inside ``requirements.txt`` file, put in each required library name (this should be equal to the name used when installing by pip, for instance: pip install __sklearn__); each line must have only one library name. This is what inside of a typical ``requirements.txt`` file should look like:
 
 ⬇️ __requirements&#46;txt__
 
