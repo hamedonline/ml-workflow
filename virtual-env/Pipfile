@@ -4,14 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-numpy = "*"
-pandas = "*"
+xgboost = "<1.6.0"
+pandas = "<1.4.0"
 sklearn = "*"
-xgboost = "*"
+numpy = "*"
 waitress = "*"
 Flask = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.8"
+python_version = "3.9"
