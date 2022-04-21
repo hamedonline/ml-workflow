@@ -1,6 +1,6 @@
-numpy
-pandas
+xgboost<1.6.0
+pandas<1.4.0
 sklearn
-xgboost
+numpy
 flask
 waitress
